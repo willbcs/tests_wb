@@ -1,0 +1,109 @@
+nome = input('Qual o seu nome? ')
+altura = input('Qual a sua altura? ')
+peso = input('Qual o seu peso? ')
+print(f'O seu nome é {nome}, tem {altura} de altura e pesa {peso} Kg.')
+
+"!=" = Diferente ; Crtl + L = limpa a tela
+
+Strings são interáveis: nome = B r u n o
+Cada letra tem uma contragem:  0 1 2 3 4 (ou)
+                              -5-4-3-2-1 
+
+Se escrever: print(nome [2]); o valor retornado será "u".
+Se escrever: print(nome[0:5:2]); o resultado será: Buo
+Ele contou o "passo" que seria do caracter "0" (B) até o caracter "5" (1 valor a mais do 
+fim da palavra) e por último solicitou o "salto" de 2 em 2 contando a partir do "B"
+Função "len" conta os espaços de um nome inclusive espeços entre palavras e escreve
+a quantidade se usar no string.
+Se escrever: print(nome[-1:-6:-1]); Será exibido "onurB"
+Lembre que a última letra é o dígito "-1"
+
+Função ".isdigit()" Verifica se só foram digitados números (bom para senhas)
+Para verificar digitos numéricos int ou float use:
+if type(valor_1) != int or type(valor_1) != float:
+
+Função ".isalpha()" Verifica se foram digitadas somente letras (Não reconhece espaços)
+DICA: PARA VERIFICAR SE FORAM DIGITADOS SOMENTE NOMES (inclusive espaços entre eles)
+if all(n.isalpha() for n in VARIÁVEL.split(' ')) 
+
+PARA CONVERTER STR EM INT:
+n = input('Digite um número: ') #Usuário digita
+if n.isdigit(): #Verifica se só foram digitados números
+n_inteiro = int(n) #Transformas a variável "n" em "int", atribuindo outro nome a ela.
+
+"Continue" após um else faz retonar ao início.
+
+While and break. Faz repetição até parar
+
+Para fazer:
+Número = 1
+Número = Número + 1 (Pode substituir essa linha por "Número +=1")
+Isso vale pra toda operação em que preciso atribuir um valor a uma variável já definida.
+
+Função Range dentro do parenteses significa (start, stop, step) ex: for x in range(0, 5, 2) 
+Ele vai contar 0, 2, 4, 6, 8.
+
+FUNÇÃO ITER: Usar "iter"(significa iterável) em um programa pode fazer ler caracter por 
+caractere. Ex:
+
+texto = 'Bruno'                     |  A resposta será:
+iterador = iter(texto)              | 
+while True:                         | B
+    try:                            | R
+        letra = next(iterador)      | U
+        print(letra)                | N
+    except StopIteration:           | O
+        break                       |
+
+StopIteration é o erro que daria se fosse solicitado o tempo inteiro o "Next" e a palavra
+já não tivesse mais caracteres. O Except trata esse erro encerrando o loop no momento que 
+acontecer.
+Isso é o que o 'for' faz por trás dos panos na programação. A resposta seria a mesmo que
+a programação acima, se:
+texto = "Bruno"
+for letra in texto:	
+	print(letra) 
+
+função "list" pode ser escrito "lista = []" Pode listar qualquer coisa e é mutável.
+Em lista podemos fazer "CRUD" - Create, Read, Update and Delete
+Função ".append()" acrescenta itens numa lista. Ex: lista = [1,2,3,4] - lista.append(50) -
+print(lista)...vai aparecer na tela [1,2,3,4,50].
+
+Função ".pop()" subtrai. Ex: lista = [1,2,3,4,50] - lista.pop() - print(lista)... 
+vai aparecer na tela [1,2,3,4]. Ou de forma aleatória na posição colocando o dígito
+ex: ".pop(2)"
+
+"Try except" serve para tratar erros també.
+Ex:
+Try:
+    indice = int(lista_str)
+    del lista[indice]
+
+Except ValueError:
+    print('Por favor digite número inteiro')
+
+Nesse exemplo, se vc tentar escrever algo diferente de um número inteiro para a lista
+ele informará a mensagem na tela.
+
+Formatação de números:
+
+numero_1 = 0.1
+numero_2 = 0.7
+numero_3 = numero_1 + numero_2
+print(numero_3)
+print(f'{numero_3:.2f}')
+print(round(numero_3, 2))
+
+Os valores retornados serão:
+
+0.7999999999999999
+0.80
+0.8
+
+A função "ROUND" formata a variável numérica indicando na segunda posição o tanto de casas 
+decimais a serem exibidas, porém ele desconsidera os "zeros'
+
+Na hora do print, se colocar ".strip", essa função elimina os espaços antes e depois
+do que estiver escrito.
+print(variável.strip()) -> ".lstrip" corta na esquerda e ".rstrip" corta na direita.
+
