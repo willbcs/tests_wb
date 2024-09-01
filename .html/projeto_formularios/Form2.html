@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+</head>
+<body>
+
+    <h1>Contato</h1>
+
+<form method="post" action="
+https://professores.unisanta.br/sobrino/scripts/mostra-v2.php">             
+<!-- method= "get" - passar para links sem necessidade de proteção no preenchimento; method= "post" - passar de link ao inserir informações sigilosas  -->
+    <p><!-- <label for="usuario"> <b>Usuário: </b> </label><br> -->
+    <input type="email" name="e-mail" id="e-mail" size="20" maxlength="20" placeholder="E-mail"> </p>
+
+    <p><!-- <label for="senha"> <b>Senha: </b> </label><br> --> <input type="tel" name="telefone" id="telefone" size="11" maxlength="11" placeholder="Telefone"></p>
+   
+        <p> 
+            <!-- <label for="motivo-contato"><b>Motivo do contato:</b></label><br> -->
+            <textarea name="motivo-contato" id="motivo-contato" rows="5" cols="40" placeholder="Motivo do contato"></textarea> 
+            <!-- Não coloque espaços após o placeholder ou ficará dando problemas de exibição -->
+        </p>
+
+        <p> 
+            <label for="escolaridade"><b>Escolaridade:</b></label><br>
+            <select name="escolaridade" id="escolaridade" required> 
+                <option value="" disabled selected>Escolaridade</option>
+                <option value="ef">Ensino Fundamental</option>
+                <option value="em">Ensino Médio</option>
+                <option value="et">Ensino Técnico</option>
+                <option value="es">Ensino Superior</option>
+                <option value="pg">Pós-Graduação</option>
+            </select>
+        </p>
+
+        <p><fieldset>
+            <legend><b>Você é aluno da Unisanta?</b></legend>
+            <input type="radio" name="aluno-unisanta" value="sim" id="aluno-unisanta-s"><label for="aluno-unisanta-s">Sim<label>
+            <input type="radio" name="aluno-unisanta" value="não" id="aluno-unisanta-n"><label for=aluno-unisanta-n>Não</label>
+        </fieldset></p>
+
+        <p><fieldset>
+            <legend><b>Quais sua linguagens favoritas?</b></legend>
+            <input type="checkbox" name="Ling[]" value="c#" id="Ling-c#"><label for="Ling-c#">C#</label>
+            
+            <input type="checkbox" name="Ling[]" value="html" id="Ling-html"><label for="Ling-html">HTML</label>
+            
+            <input type="checkbox" name="Ling[]" value="javascript" id="Ling-js"><label for="Ling-js">JavaScript</label>
+            
+            <input type="checkbox" name="Ling[]" value="python" id="Ling-py"><label for="Ling-py">Python</label>
+        </fieldset></p>
+
+
+
+    <button>Enviar</button>
+
+    <!-- <button type="reset">Limpar</button>
+    <button type="button"> Validar </button>  -->
+
+
+
+
+
+</form>
+
+</body>
+</html>
