@@ -12,7 +12,7 @@ def eh_numero(mensagem):
         except ValueError:
             os.system('cls')
             print('Caracteres inválidos foram digitados')
-
+        
 def Numeros():
     soma = 0; maior = -2**31; menor = 2**31 - 1
     numero = []

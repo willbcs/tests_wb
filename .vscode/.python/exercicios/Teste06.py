@@ -13,6 +13,8 @@ while senha_salva != tentativa and repeticoes < 3:
         
 if senha_salva == tentativa:
     print('Bem-vindo')
-
-if repeticoes == 3:
+else:
+    repeticoes+= 1
+    
+if repeticoes > 3:
     print("Sua conta foi bloqueada!")
