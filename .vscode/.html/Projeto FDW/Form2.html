@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/forms2.css" rel="stylesheet">
+    <title>Contato</title>
+   
+</head>
+<body>
+
+    <h1 class="destaque">Contato</h1>
+
+<form method="post" action="
+https://professores.unisanta.br/sobrino/scripts/mostra-v2.php">             
+<!-- method= "get" - passar para links sem necessidade de proteção no preenchimento; method= "post" - passar de link ao inserir informações sigilosas  -->
+<label for="email"> E-mail:  </label>
+<input type="email" name="e-mail" id="e-mail"  maxlength="20">
+ <!-- placeholder="E-mail"  -->
+
+<label for="cpf"> CPF</label>
+<input type="cpf" name="cpf" id="cpf" placeholder="___.___.___-__" data-mask="000.000.000-00">
+
+<label for="data-nascimento"> Data de Nascimento </label>
+<input type="date" name="data-nascimento" id="data-nascimento">
+
+
+<label for="telefone"> Telefone:  </label> 
+<input type="tel" name="telefone" id="telefone" maxlength="11" placeholder="(__)_____-____" data-mask="(00) 00000-0000"> 
+<!-- placeholder="Telefone" Para deixar escrita dentro do text area
+-->
+
+         
+<label for="motivo-contato">Motivo do contato:</label>
+<textarea name="motivo-contato" id="motivo-contato" cols="40" ></textarea> 
+<!-- Não coloque espaços após o placeholder ou ficará dando problemas de exibição --> 
+<!-- placeholder="Motivo do contato" -->
+                 
+<label for="escolaridade">Escolaridade:</label>
+<select name="escolaridade" id="escolaridade" required> 
+    <option value="" disabled selected>Escolaridade</option>
+    <option value="ef">Ensino Fundamental</option>
+    <option value="em">Ensino Médio</option>
+    <option value="et">Ensino Técnico</option>
+    <option value="es">Ensino Superior</option>
+    <option value="pg">Pós-Graduação</option>
+</select>
+    
+
+<fieldset class="destaque">
+    <legend>Você é aluno da Unisanta?</legend>
+    <input type="radio" name="aluno-unisanta" value="sim" id="aluno-unisanta-s"><label for="aluno-unisanta-s">Sim<label>
+    <input type="radio" name="aluno-unisanta" value="não" id="aluno-unisanta-n"><label for=aluno-unisanta-n>Não</label>
+</fieldset>
+
+<fieldset>
+    <legend>Quais sua linguagens favoritas?</legend>
+    <input type="checkbox" name="Ling[]" value="c#" id="Ling-c#"><label for="Ling-c#">C#</label>
+    
+    <input type="checkbox" name="Ling[]" value="html" id="Ling-html"><label for="Ling-html">HTML</label>
+    
+    <input type="checkbox" name="Ling[]" value="javascript" id="Ling-js"><label for="Ling-js">JavaScript</label>
+    
+    <input type="checkbox" name="Ling[]" value="python" id="Ling-py"><label for="Ling-py">Python</label>
+</fieldset>
+
+
+
+<button>Enviar</button>
+
+<!-- <button type="reset">Limpar</button>
+<button type="button"> Validar </button>  -->
+
+
+</form>
+
+<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+
+</body>
+</html>
