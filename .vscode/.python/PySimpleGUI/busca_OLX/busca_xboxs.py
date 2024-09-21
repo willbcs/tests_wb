@@ -29,7 +29,7 @@ def resultados_busca(dados):
         if eventos == 'Copiar Link' and linha_selecionada is not None:          
             link_copiado = dados[linha_selecionada][3]  # Índice 3 que é a coluna do link
             pyperclip.copy(link_copiado)
-            sg.popup('Link copiado para a área de transferência!') 
+            sg.popup('Link copiado para a área de transferência!', keep_on_top=True) 
         
     janela.close()
 

@@ -69,7 +69,7 @@ def main():
         if eventos == 'Validar':
             cpf = valores['cpf']
             mensagem, sucesso = Validador(cpf)
-            janela['resposta'].update(mensagem, text_color='green' if sucesso else 'red', font=('Default', 10, 'bold')) # Aqui, de acordo com o valor Booleano de 'sucesso' ele retorna a mensagem em uma cor específica. 
+            janela['resposta'].update(mensagem, text_color='green' if sucesso else 'red', font=('Default', 10, 'bold')) # De acordo com o que vier de 'mensagem' ele retorna ela em uma cor específica. 
         if eventos == 'cpf':
             # Permitir apenas números ao digitar
             cpf = re.sub(r'[^\d]', '', valores['cpf'])

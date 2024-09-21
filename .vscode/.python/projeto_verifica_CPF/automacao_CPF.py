@@ -9,7 +9,7 @@ from PySimpleGUI import PySimpleGUI as sg
 sg.theme('Reddit')
 def resultados_tela(dados):
     layout = [
-        [sg.Table(values=dados, headings=["Nome", "CPF", "Status"], auto_size_columns = True, num_rows=10, justification="left")],
+        [sg.Table(values=dados, headings=["Nome", "CPF", "Status"], auto_size_columns = True, num_rows=30, justification="left")],
         [sg.Button('Fechar')]
     ]
     janela = sg.Window('Validador de CPF', layout)
