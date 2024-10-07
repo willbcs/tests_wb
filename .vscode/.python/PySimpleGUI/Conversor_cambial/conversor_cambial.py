@@ -31,6 +31,7 @@ def obter_conversao():
         return None
     
 layout = [
+    
     [sg.Text('Digite o valor em reais:', relief = sg.RELIEF_RIDGE, font=('Default', 10, 'bold'), justification='center')],
 
     [sg.Input('', key='valor_reais', size=(21,1), enable_events=True), sg.Button('Converter'), sg.Button('Fechar')],
@@ -66,7 +67,7 @@ while True:
 
     if eventos == 'Converter':
         try:
-            valor_real = float(valores['valor_reais'].replace('R$ ', '').replace('.', '').replace(',', '.'))
+            valor_real = float(valores['valor_reais'])
             cambio = obter_conversao()
 
             if cambio is not None:
@@ -87,7 +88,7 @@ while True:
 
     if eventos == 'valor_reais':
             # Permitir apenas números ao digitar
-            valor_limpo = re.sub(r'[^0-9,]', '', valores['valor_reais'])
+            valor_limpo = re.sub(r'[^0-9.]', '', valores['valor_reais'])
             janela['valor_reais'].update(valor_limpo)
 
 janela.close()
