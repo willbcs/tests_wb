@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        th a {
+            color: white; /* Altere a cor do link para branco */
+            text-decoration: none; /* Remova o sublinhado */
+        }
+        th a:hover {
+            text-decoration: underline; /* Adicione sublinhado ao passar o mouse */
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Eventos</h1>
+    <table>
+        <tr>
+            <th><a href="{{ url_for('eventos', sort='id') }}">ID</a></th>
+            <th><a href="{{ url_for('eventos', sort='titulo') }}">Título</a></th>
+            <th><a href="{{ url_for('eventos', sort='data_hora') }}">Data e Hora</a></th>
+            <th><a href="{{ url_for('eventos', sort='local') }}">Local</a></th>
+            <th><a href="{{ url_for('eventos', sort='valor') }}">Valor</a></th>
+            <th>Descrição</th>
+            <th>Link de Compra</th>
+        </tr>
+        {% for evento in eventos %}
+        <tr>
+            <td>{{ evento.id }}</td>
+            <td>{{ evento.titulo }}</td>
+            <td>{{ evento.data_hora }}</td>
+            <td>{{ evento.local }}</td>
+            <td>{{ evento.valor }}</td>
+            <td>{{ evento.descricao }}</td>
+            <td><a href="{{ evento.compra }}">Comprar</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
