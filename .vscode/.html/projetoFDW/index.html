@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cálculo de Média</title>
+	<link href="css/main.css" rel="stylesheet">
+	<!-- <script src="js/script.js" defer></script>  -->
+	<!-- <script src="js/script.js" async></script>  -->
+</head>
+	
+<body>
+
+	<h1>Cálculo de Média</h1>
+	
+	<label for="p1">P1</label>
+	<input type="number" name="p1" id="p1" autofocus maxlength="4">
+	
+	<label for="p2">P2</label>
+	<input type="number" name="p2" id="p2" maxlength="4"> 
+
+	<button id="btnCalcular">Calcular média</button>
+	
+	<strong>Resultado</strong>
+	<p id="saida"><span style="color:#ccc;">[aguardando]</span></p>
+	
+	<script src="js/script.js" defer></script> 
+	<!-- Pode chamar o script no final do programa antes de fechar o body, ou adicionar o atributo "async" caso queira por o script antes de abrir o body, porém não deixa vc 
+	determinar a ordem existe também a possibilidade de por o atributo defer, no qual ele espera toda página carregar para executar, 
+	além disso o defer determina a ordem de execução-->
+</body>
+	
+</html>
+
+
+

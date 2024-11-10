@@ -1,0 +1,5 @@
+// Comentário
+/* Comentário 
+de multiplas linhas
+*/
+console.log('Hello World!')
