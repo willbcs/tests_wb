@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Estilo global */
+body, input, select, button {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Fundo claro */
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+/* Centraliza o título */
+h1 {
+    font-size: 35px;
+    color: dodgerblue;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+output {
+    display: inline-block; /* Alterado de block para inline-block */
+    width: 100%; /* Mantém a largura ajustável */
+    max-width: 500px; /* Largura máxima */
+    padding: 15px;
+    font-size: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff; /* Fundo branco como de um input */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    box-sizing: border-box; /* Inclui padding na largura */
+    margin-bottom: 25px; /* Espaço inferior */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+}
+
+
+/* Estilo para botões */
+button {
+    display: inline-block;
+    margin: 10px; /* Espaço entre os botões */
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 150px;
+    box-sizing: border-box; /* Garantir que o padding não afete a largura */
+    background-color: dodgerblue;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+button:active {
+    background-color: dodgerblue;
+    color: white;
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+/* Contêiner */
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+}

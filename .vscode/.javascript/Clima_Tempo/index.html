@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Climáticas</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Informações Climáticas</h1>
+        <form id="climaForm">
+            <div class="row">
+                <label for="cidade">Escolha uma cidade:</label>
+                <select id="cidade" class="cidade" required>
+                    <option value="" disabled selected>Selecione...</option>
+                    <option value="Abu Dhabi">Abu Dhabi</option>
+                    <option value="Accra">Accra</option>
+                    <option value="Addis Ababa">Addis Ababa</option>
+                    <option value="Algiers">Algiers</option>
+                    <option value="Andorra la Vella">Andorra la Vella</option>
+                    <option value="Ankara">Ankara</option>
+                    <option value="Antananarivo">Antananarivo</option>
+                    <option value="Asunción">Asunción</option>
+                    <option value="Athens">Athens</option>
+                    <option value="Baghdad">Baghdad</option>
+                    <option value="Baku">Baku</option>
+                    <option value="Bamako">Bamako</option>
+                    <option value="Bangkok">Bangkok</option>
+                    <option value="Banjul">Banjul</option>
+                    <option value="Bucharest">Bucharest</option>
+                    <option value="Budapest">Budapest</option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Canberra">Canberra</option>
+                    <option value="Caracas">Caracas</option>
+                    <option value="Castries">Castries</option>
+                    <option value="Chisinau">Chisinau</option>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Copenhagen">Copenhagen</option>
+                    <option value="Dakar">Dakar</option>
+                    <option value="Damascus">Damascus</option>
+                    <option value="Dhaka">Dhaka</option>
+                    <option value="Dili">Dili</option>
+                    <option value="Dodoma">Dodoma</option>
+                    <option value="Doha">Doha</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Dushanbe">Dushanbe</option>
+                    <option value="Edinburgh">Edinburgh</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Jerusalem">Jerusalem</option>
+                    <option value="Juba">Juba</option>
+                    <option value="Kabul">Kabul</option>
+                    <option value="Kampala">Kampala</option>
+                    <option value="Kathmandu">Kathmandu</option>
+                    <option value="Khartoum">Khartoum</option>
+                    <option value="Kiev">Kiev</option>
+                    <option value="Kigali">Kigali</option>
+                    <option value="Kingston">Kingston</option>
+                    <option value="Kinshasa">Kinshasa</option>
+                    <option value="Kuala Lumpur">Kuala Lumpur</option>
+                    <option value="Kuwait City">Kuwait City</option>
+                    <option value="La Paz">La Paz</option>
+                    <option value="Libreville">Libreville</option>
+                    <option value="Lima">Lima</option>
+                    <option value="Lisbon">Lisbon</option>
+                    <option value="Ljubljana">Ljubljana</option>
+                    <option value="Lome">Lome</option>
+                    <option value="London">London</option>
+                    <option value="Luanda">Luanda</option>
+                    <option value="Lusaka">Lusaka</option>
+                    <option value="Madrid">Madrid</option>
+                    <option value="Majuro">Majuro</option>
+                    <option value="Malabo">Malabo</option>
+                    <option value="Male">Male</option>
+                    <option value="Managua">Managua</option>
+                    <option value="Manama">Manama</option>
+                    <option value="Mansoura">Mansoura</option>
+                    <option value="Maputo">Maputo</option>
+                    <option value="Marigot">Marigot</option>
+                    <option value="Minsk">Minsk</option>
+                    <option value="Mogadishu">Mogadishu</option>
+                    <option value="Monaco">Monaco</option>
+                    <option value="Monrovia">Monrovia</option>
+                    <option value="Montevideo">Montevideo</option>
+                    <option value="Moroni">Moroni</option>
+                    <option value="Moscow">Moscow</option>
+                    <option value="Muscat">Muscat</option>
+                    <option value="Nairobi">Nairobi</option>
+                    <option value="Nassau">Nassau</option>
+                    <option value="New Delhi">New Delhi</option>
+                    <option value="Nouakchott">Nouakchott</option>
+                    <option value="Oslo">Oslo</option>
+                    <option value="Ottawa">Ottawa</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Podgorica">Podgorica</option>
+                    <option value="Port Moresby">Port Moresby</option>
+                    <option value="Port au Prince">Port au Prince</option>
+                    <option value="Porto-Novo">Porto-Novo</option>
+                    <option value="Prague">Prague</option>
+                    <option value="Rabat">Rabat</option>
+                    <option value="Reykjavik">Reykjavik</option>
+                    <option value="Riga">Riga</option>
+                    <option value="Rome">Rome</option>
+                    <option value="San Salvador">San Salvador</option>
+                    <option value="Sana">Sana</option>
+                    <option value="São Tomé">São Tomé</option>
+                    <option value="Sarajevo">Sarajevo</option>
+                    <option value="Seoul">Seoul</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Sofia">Sofia</option>
+                    <option value="Stockholm">Stockholm</option>
+                    <option value="Sucre">Sucre</option>
+                    <option value="Tallinn">Tallinn</option>
+                    <option value="Tashkent">Tashkent</option>
+                    <option value="Tbilisi">Tbilisi</option>
+                    <option value="Tokyo">Tokyo</option>
+                    <option value="Tunis">Tunis</option>
+                    <option value="Ulaanbaatar">Ulaanbaatar</option>
+                    <option value="Vaduz">Vaduz</option>
+                    <option value="Valletta">Valletta</option>
+                    <option value="Vatican City">Vatican City</option>
+                    <option value="Vienna">Vienna</option>
+                    <option value="Vientiane">Vientiane</option>
+                    <option value="Vilnius">Vilnius</option>
+                    <option value="Warsaw">Warsaw</option>
+                    <option value="Washington, D.C.">Washington, D.C.</option>
+                    <option value="Wellington">Wellington</option>
+                    <option value="Yamoussoukro">Yamoussoukro</option>
+                    <option value="Yaoundé">Yaoundé</option>
+                    <option value="Zagreb">Zagreb</option>
+                    <option value="Zurich">Zurich</option>
+                    <option value="Brasília">Brasília</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                    <option value="Belo Horizonte">Belo Horizonte</option>
+                    <option value="Salvador">Salvador</option>
+                    <option value="Fortaleza">Fortaleza</option>
+                    <option value="Curitiba">Curitiba</option>
+                    <option value="Recife">Recife</option>
+                    <option value="Porto Alegre">Porto Alegre</option>
+                    <option value="Manaus">Manaus</option>
+                    <option value="Belém">Belém</option>
+                    <option value="Goiânia">Goiânia</option>
+                    <option value="São Luís">São Luís</option>
+                    <option value="Maceió">Maceió</option>
+                    <option value="Natal">Natal</option>
+                    <option value="João Pessoa">João Pessoa</option>
+                    <option value="Campo Grande">Campo Grande</option>
+                    <option value="Teresina">Teresina</option>
+                    <option value="Aracaju">Aracaju</option>
+                    <option value="Vitória">Vitória</option>
+                    <option value="Boa Vista">Boa Vista</option>
+                    <option value="Macapá">Macapá</option>
+                    <option value="Rio Branco">Rio Branco</option>
+                    <option value="Palmas">Palmas</option>
+                </select>
+            </div>
+            <p id="saida" class="saida"></p>
+            <div class="row">
+                <button type="button" id="btnBuscar" class="buscar">Buscar</button>
+                <button type="button" id="btnLimpar" class="fechar">Limpar</button>
+            </div>
+            <div class="row">
+                <div class="info">
+                    <span class="info-label">Longitude:</span>
+                    <span id="longitude" class="info-value">-</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="info">
+                    <span class="info-label">Latitude:</span>
+                    <span id="latitude" class="info-value">-</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="info">
+                    <span class="info-label">Condição:</span>
+                    <span id="condicao" class="info-value">-</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="info">
+                    <span class="info-label">Descrição:</span>
+                    <span id="descricao" class="info-value">-</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="info">
+                    <span class="info-label">Temperatura:</span>
+                    <span id="temp" class="info-value">-</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="info">
+                    <span class="info-label">Sensação Térmica:</span>
+                    <span id="senset" class="info-value">-</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="info">
+                    <span class="info-label">Temp. Mínima:</span>
+                    <span id="tempmin" class="info-value">-</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="info">
+                    <span class="info-label">Temp. Máxima:</span>
+                    <span id="tempmax" class="info-value">-</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="info">
+                    <span class="info-label">Umidade:</span>
+                    <span id="umidade" class="info-value">-</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="info">
+                    <span class="info-label">Velocidade do Vento:</span>
+                    <span id="velvento" class="info-value">-</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="info">
+                    <span class="info-label">País:</span>
+                    <span id="pais" class="info-value">-</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="info">
+                    <span class="info-label">Local:</span>
+                    <span id="local" class="info-value">-</span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/clima_tempo.js" defer></script>
+</body>
+</html>

@@ -5,7 +5,7 @@ import re
 sg.theme('Systemdefault')
 
 API_KEY = '567c400e40df803fa1d650f5'
-BASE_URL = 'https://v6.exchangerate-api.com/v6/567c400e40df803fa1d650f5/latest/'
+BASE_URL = f'https://v6.exchangerate-api.com/v6/{API_KEY}/latest/'
 
     
 def obter_conversao():

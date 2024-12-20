@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="titulo">Conversor de Moeda</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Moeda</h1>
+        <form id="converterForm">
+            <div class="row">
+                <label for="valorReais">Digite o valor em R$: </label>
+                <input type="number" class="digitereais" id="valorReais" required min = "0">
+            </div>
+            <p id="saida" class="output"></p>
+            <div class="row">
+                <button type="button" id="converter" class="convert">Converter</button>
+                <button type="button" id="limpar" class="limpar">Limpar</button>
+            </div>
+            <div class="row result">
+                Dólar US: <p id="dolarUS" class="output">-</p>
+            </div>
+            <div class="row result">
+                Euro: <p id="euro" class="output">-</p>
+            </div>
+            <div class="row result">
+                Libra ENG: <p id="libra" class="output">-</p>
+            </div>
+            <div class="row result">
+                Iene JPN: <p id="iene" class="output">-</p>
+            </div>
+            <div class="row result">
+                Dólar AUS: <p id="dolarAUS" class="output">-</p>
+            </div>
+            <div class="row result">
+                Dólar CND: <p id="dolarCND" class="output">-</p>
+            </div>
+            <div class="row result">
+                Yuan CHI: <p id="yuan" class="output">-</p>
+            </div>
+            <div class="row result">
+                Franco SUI: <p id="franco" class="output">-</p>
+            </div>
+            <div class="row result">
+                Peso ARG: <p id="peso" class="output">-</p>
+            </div>
+            <p id="saida" class="output"></p>
+        </form>
+    </div>
+   
+
+    <script src="js/conversor.js" defer></script>
+
+</body>
+</html>

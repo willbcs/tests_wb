@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="titulo">Validador de CPF</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Validador de CPF</h1>
+        <form id="converterForm">
+            <div class="row">
+                <!-- <label for="digiteCPF">Digite o CPF: </label> -->
+                <input type="text" class="digiteCPF" id="digiteCPF" maxlength="11" pattern="\d{11}" placeholder="Digite o CPF" required>
+            </div>
+            <div class="row">
+                <button type="button" id="validar" class="validar">Validar</button>
+                <button type="button" id="limpar" class="limpar">Limpar</button>
+            </div>
+            <p id="saida" class="output"></p>
+
+        </form>
+    </div>
+    
+    <script src="js/validador.js" defer></script>
+
+</body>
+</html>

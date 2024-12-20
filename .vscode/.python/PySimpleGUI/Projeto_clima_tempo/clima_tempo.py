@@ -52,12 +52,12 @@ def obter_clima_tempo(cidade):
         sensação_termica = dados["main"]["feels_like"]
         temp_min = dados["main"]["temp_min"]
         temp_max = dados["main"]["temp_max"]
-        humidade = dados["main"]["humidity"]
+        umidade = dados["main"]["humidity"]
         velocidade_vento = dados["wind"]["speed"]
         pais_sigla = dados["sys"]["country"]
         local_nome = dados["name"]
 
-        return longitude, latitude, condicao, descricao, temperatura, sensação_termica, temp_min, temp_max, humidade, velocidade_vento, pais_sigla, local_nome
+        return longitude, latitude, condicao, descricao, temperatura, sensação_termica, temp_min, temp_max, umidade, velocidade_vento, pais_sigla, local_nome
     else:
         return None
     
@@ -90,7 +90,7 @@ layout = [
     
     [sg.Text('Temp Max:', size=(15, 1), relief=sg.RELIEF_RIDGE, font=('Default', 10, 'bold'), justification='center', background_color = color), sg.Text('', key='-TEMP_MAX-', background_color = color)],
     
-    [sg.Text('Humidade:', size=(15, 1), relief=sg.RELIEF_RIDGE, font=('Default', 10, 'bold'), justification='center', background_color = color), sg.Text('', key='-HUMIDADE-', background_color = color)],
+    [sg.Text('Umidade:', size=(15, 1), relief=sg.RELIEF_RIDGE, font=('Default', 10, 'bold'), justification='center', background_color = color), sg.Text('', key='-UMIDADE-', background_color = color)],
     
     [sg.Text('Veloc. do Vento:', size=(15, 1), relief=sg.RELIEF_RIDGE, font=('Default', 10, 'bold'), justification='center', background_color = color), sg.Text('', key='-VENTO-', background_color = color)],
     
@@ -123,7 +123,7 @@ while True:
                 janela['-SENSACAO_TERM-'].update(f"{dados_clima[5]}°C", font =('Default', 10, 'bold'))
                 janela['-TEMP_MIN-'].update(f"{dados_clima[6]}°C", font =('Default', 10, 'bold'))
                 janela['-TEMP_MAX-'].update(f"{dados_clima[7]}°C", font =('Default', 10, 'bold'))
-                janela['-HUMIDADE-'].update(f"{dados_clima[8]}%", font =('Default', 10, 'bold'))
+                janela['-UMIDADE-'].update(f"{dados_clima[8]}%", font =('Default', 10, 'bold'))
                 janela['-VENTO-'].update(f"{dados_clima[9]}m/s", font =('Default', 10, 'bold'))
                 janela['-PAIS-'].update(dados_clima[10], font =('Default', 10, 'bold'))
                 janela['-LOCAL-'].update(dados_clima[11], font =('Default', 10, 'bold'))               

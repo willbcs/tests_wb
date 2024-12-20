@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* Estilo global */
+body, input, select, button {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Fundo claro */
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+/* Centraliza o título */
+h1 {
+    font-size: 35px;
+    color: dodgerblue;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilo para labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 25px;
+    margin-right: 10px;
+}
+
+/* Estilo para inputs, selects e botões */
+button, input, select {
+    display: block;
+    margin-bottom: 25px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 150px;
+    box-sizing: border-box; /* Garantir que o padding não afete a largura */
+}
+
+/* Estilo para inputs e selects */
+input, select {
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+/* Alterando borda ao passar o mouse */
+input:hover, select:hover {
+    border-color: dodgerblue;
+}
+
+/* Melhorando o foco nos inputs e selects */
+input:focus, select:focus {
+    border-color: dodgerblue;
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilo para botões */
+button {
+    background-color: dodgerblue;
+    font-weight: bold;
+    margin-right: 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+button:active {
+    background-color: dodgerblue;
+    color: white;
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+/* Contêiner e alinhamento */
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+}
+
+/* Exibir a descrição e o resultado lado a lado */
+.row {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Alinha verticalmente o texto e o resultado */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Colocando a classe info ao lado do nome da informação */
+.info {
+    margin-left: 10px; /* Espaço entre o nome da informação e o valor */
+}
+
+.info-label {
+    font-weight: bold;
+    color: navy;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.info-value {
+    color: navy;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+/* Resultados com destaque */
+.result {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: navy;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+}
+
+/* Responsividade para melhorar a visualização em telas menores */
+@media (max-width: 768px) {
+    .row {
+        text-align: center;
+        flex-direction: column; /* Alinha os elementos verticalmente em telas pequenas */
+    }
+
+    button, input, select {
+        width: 100%; /* Botões e inputs com 100% da largura em telas pequenas */
+    }
+}
+
+/* Foco no contêiner quando o formulário é interagido */
+.container:focus-within {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

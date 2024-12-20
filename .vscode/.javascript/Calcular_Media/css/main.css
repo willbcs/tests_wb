@@ -72,3 +72,19 @@ p#saida {
 	font-family: 'Courier New', Courier, monospace;
 	font-weight: bold;
 }
+.button-row {
+	display: flex;
+	gap: 10px; /* Espaço entre os botões */
+}
+
+.button-row2 {
+	display: flex;
+	gap: 10px; /* Espaço entre os botões */
+}
+.input-nome {
+	border: 1px solid #000;
+	border-radius: 10px;
+	width: 600px;
+	
+
+}
