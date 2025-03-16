@@ -5,7 +5,7 @@ function formato_valido($mensagem)
     while (true)
     {
         $numero = readline($mensagem);
-        if (ctype_digit($numero) > 0)
+        if (ctype_digit($numero))
         {
             return (int)$numero;
         }

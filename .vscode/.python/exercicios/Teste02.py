@@ -1,24 +1,45 @@
-h = input('Digite o horário: ')
-if h.isdigit():
-    hint = int(h)
-    if hint <= 23 and hint >= 0:
-        m = input('Digite os minutos: ')
-        if m.isdigit():
-            mint = int(m)
-            if mint <= 59 and mint >= 0:
-                if hint >= 0 and hint <= 11 and mint <= 59:
-                    print(f'Bom dia! Agora são {hint} horas e {mint} minutos!')
-                elif hint >= 12 and hint <= 17 and mint <= 59:
-                    print(f'Boa tarde! Agora são {hint} horas e {mint} minutos!')
-                elif hint >= 18 and hint <= 23 and mint <= 59:
-                    print(f'Boa noite! Agora são {hint} horas e {mint} minutos!')
-                else:
-                    print("Não é um horário válido!")
+import os
+
+def verificaHora(mensagem):
+    while True:
+        h = input(mensagem)
+        if h.isdigit() and int(h):
+            if int(h) <= 23 and int(h) >= 0:
+                os.system('cls')
+                return int(h)
             else:
-                print('Não é um valor correto para minutos')
+                os.system('cls')
+                print('Esse não é um valor aceitável para horas!')
         else:
+            os.system('cls')
+            print('Por favor, digite apenas números inteiro entre 0 e 24!')
+
+def verificaMinuto(mensagem):
+    while True:
+        m = input(mensagem)
+        if m.isdigit() and int(m):
+            if int(m) <= 59 and int(m) >= 0:
+                os.system('cls')
+                return int(m)
+            else:
+                os.system('cls')
+                print('Esse não é um valor aceitável para minutos!')
+        else:
+            os.system('cls')
             print('Por favor, digite apenas números')
-    else:
-        print('Esse não é um valor aceitável para horas!')
-else:
-    print('Por favor, digite apenas números')
+
+def mostrarHora():
+    h = verificaHora('Digite o horário: ')
+    m = verificaMinuto('Digite os minutos: ')
+    if h >= 0 and h <= 11:
+        os.system('cls')
+        print(f'Bom dia! Agora são {h} horas e {m} minutos!')
+    elif h >= 12 and h <= 17:
+        os.system('cls')
+        print(f'Boa tarde! Agora são {h} horas e {m} minutos!')
+    elif h >= 18 and h <= 23:
+        os.system('cls')
+        print(f'Boa noite! Agora são {h} horas e {m} minutos!')
+
+if __name__ == '__main__':
+    mostrarHora()

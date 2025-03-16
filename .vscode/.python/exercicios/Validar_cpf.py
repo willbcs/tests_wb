@@ -44,7 +44,3 @@ def Validador():
     
 if __name__=='__main__':
     Validador()
-
-
-
-
