@@ -1,0 +1,6 @@
+# Arquivo: requirements.txt
+# Bibliotecas necessárias para o projeto
+torch
+ultralytics
+opencv-python
+numpy
