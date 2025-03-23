@@ -37,7 +37,7 @@ Este repositório serve como prática para aprendizado e aprimoramento das habil
 📜 Licença
 Este projeto é de código aberto e pode ser utilizado livremente.
 
-🔗 Autor: Seu Nome
+🔗 Autor: WWilliam Bruno Carlos Silva
 📅 Última atualização: Março de 2025
 
 Se quiser personalizar algo, me avise! 🚀

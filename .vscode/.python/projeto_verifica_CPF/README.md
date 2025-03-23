@@ -73,4 +73,4 @@ for linha in pagina_CPF.iter_rows(min_row=2, values_only=True):
 
 Caso tenha dúvidas, entre em contato pelo e-mail: willbc.silva@gmail.com
 
-Desenvolvido com 💻 por William Bruno
+Desenvolvido por 💻 William Bruno
