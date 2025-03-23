@@ -52,5 +52,5 @@ Salvamento automático: Cada certificado é salvo em formato PNG com o nome do a
 
 Caso tenha dúvidas, entre em contato pelo e-mail: willbc.silva@gmail.com
 
-Desenvolvido por 💻 por William Bruno
+Desenvolvido 💻 por William Bruno
 

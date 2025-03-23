@@ -64,4 +64,4 @@ Ordenação: Permite visualizar eventos ordenados por ID ou data.
 
 Caso tenha dúvidas, entre em contato pelo e-mail: willbc.silva@gmail.com
 
-Desenvolvido com 💻 por William Bruno
+Desenvolvido por 💻 William Bruno
