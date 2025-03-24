@@ -3,7 +3,7 @@ import torch
 from ultralytics import YOLO
 
 # Carregar modelo YOLOv8 pré-treinado
-modelo = YOLO("yolov8n.pt")  # Versão mais leve do YOLOv8
+modelo = YOLO("yolov8n.pt")  # Essa é a versão mais leve do YOLOv8
 
 def detectar_objetos():
     cap = cv2.VideoCapture(0)
@@ -17,10 +17,10 @@ def detectar_objetos():
         if not ret:
             break
 
-        # Realizar detecção
+        # Realizar a detecção
         resultados = modelo(frame)  
 
-        # Desenhar caixas delimitadoras nos objetos detectados
+        # Desenhar as "caixas" delimitadoras nos objetos detectados.
         for r in resultados:
             for caixa in r.boxes:
                 x1, y1, x2, y2 = map(int, caixa.xyxy[0])  # Coordenadas da caixa
