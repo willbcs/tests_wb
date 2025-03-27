@@ -47,23 +47,8 @@ Leitura de dados: O script lê nomes e CPFs da planilha cpf_clientes.xlsx.
 
 Validação automática: Utiliza Selenium para acessar um site e validar cada CPF.
 
-Registro dos resultados: Os CPFs validados são salvos na planilha validacao_CPF.xlsx.
+Registro dos resultados: Os CPFs são salvos na planilha validacao_CPF.xlsx com a respectiva avaliação (válido ou inválido)..
 
-📄 Exemplo de Uso
-
-O script lê a planilha e processa cada CPF automaticamente:
-
-for linha in pagina_CPF.iter_rows(min_row=2, values_only=True):
-    nome, cpf = linha
-    campo_consulta = driver.find_element(By.XPATH, "//input[@id='cpf']")
-    campo_consulta.clear()
-    campo_consulta.send_keys(cpf)
-    botao_consulta = driver.find_element(By.XPATH, "//button[@id='botaoValidarCPF']")
-    botao_consulta.click()
-    sleep(2)
-    validacao = driver.find_element(By.XPATH, "//div[@role='alert']").text
-    status = 'Válido' if 'CPF Válido!' in validacao else 'Inválido'
-    pagina_CPF.append([nome, cpf, status])
 
 📬 Contato
 
