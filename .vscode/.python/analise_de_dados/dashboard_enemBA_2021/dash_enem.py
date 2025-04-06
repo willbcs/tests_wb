@@ -10,9 +10,10 @@ st.set_page_config(
 )
 
 # Carregamento dos dados
+#A URL contendo o csv com os dados: https://drive.google.com/drive/folders/1NKuM2jtJr8vq1K3gXsfOuH6Bs58xLnqU?hl=pt-br
 @st.cache_data
 def load_data():
-    return pd.read_csv(r'C:\Users\Myrath\Documents\Dados\dados_enem_2021_BA.csv')
+    return pd.read_csv(r'C:\Users\Myrath\Documents\Dados\dados_enem_2021_BA.csv') # Substitua pelo caminho correto onde você colocou o arquivo CSV
 
 try:
     df = load_data()
@@ -134,3 +135,5 @@ with col2:
         color_discrete_map={'Pública': '#2ecc71', 'Particular': '#e74c3c', 'Não respondeu': '#3498db'}
     )
     st.plotly_chart(fig5b, use_container_width=True)
+
+    #Abra a pasta do projeto e use o comando streamlit run dash_enem.py no terminal para executar o dashboard.
