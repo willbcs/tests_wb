@@ -38,3 +38,4 @@ for indice, linha in enumerate (aba_alunos.iter_rows(min_row = 2, values_only = 
     escrever.text((1815, 1355), data_emissao, fill='black', font=fonte_emissao)
 
     imagem.save(f'C:/Users/Myrath/Desktop/Projetos_VSCode/.vscode/.python/projeto_emissao_certificado/Certificado {indice+1} - {nome_aluno}.png')
+    print(f'Certificado {indice+1} - {nome_aluno} gerado com sucesso!')
