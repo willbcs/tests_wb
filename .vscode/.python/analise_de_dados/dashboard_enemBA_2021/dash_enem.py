@@ -12,7 +12,7 @@ st.set_page_config(
 # Carregamento dos dados
 @st.cache_data
 def load_data():
-    return pd.read_csv(r'C:\Users\Myrath\Desktop\Projetos_VSCode\.vscode\.python\analise_de_dados\dashboard_enemBA_2021\dados_enem_2021_BA.csv')
+    return pd.read_csv(r'C:\Users\Myrath\Documents\Dados\dados_enem_2021_BA.csv')
 
 try:
     df = load_data()
