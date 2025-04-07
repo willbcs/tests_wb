@@ -136,4 +136,8 @@ with col2:
     )
     st.plotly_chart(fig5b, use_container_width=True)
 
+# ======================== RODAPÉ ========================
+st.markdown("---")
+st.caption("Fonte: GOV.BR • Dashboard desenvolvido por William Bruno usando Streamlit 🚀")
+
     #Abra a pasta do projeto e use o comando streamlit run dash_enem.py no terminal para executar o dashboard.

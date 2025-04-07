@@ -45,4 +45,8 @@ col3.plotly_chart(fig_loja)
 fig_pagto = px.pie(df_filtro, values = "VALOR_TOTAL", names = "FORMA_PAGAMENTO", title = "Faturamento por tipo de pagamento")
 col4.plotly_chart(fig_pagto)
 
+# ======================== RODAPÉ ========================
+st.markdown("---")
+st.caption("• Dashboard desenvolvido por William Bruno usando Streamlit 🚀")
+
 #Abra a pasta do projeto e use o comando streamlit run dash.py no terminal para executar o dashboard.
