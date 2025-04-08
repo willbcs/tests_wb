@@ -13,7 +13,7 @@ st.set_page_config(
     page_icon="📊",
     layout="wide"
 )
-df = pd.read_csv(r'C:\Users\Myrath\Desktop\Projetos_VSCode\.vscode\.python\analise_de_dados\dashboard_vendas\dados_vendas.csv', delimiter=';', encoding = "ISO-8859-1")
+df = pd.read_csv('dados_vendas.csv', delimiter=';', encoding = "ISO-8859-1")
 
 df["DATA_VENDA"] = pd.to_datetime(df["DATA_VENDA"])
 df = df.sort_values("DATA_VENDA")

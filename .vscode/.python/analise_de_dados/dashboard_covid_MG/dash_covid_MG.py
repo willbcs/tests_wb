@@ -15,7 +15,7 @@ st.title("🦠 Painel de Óbitos Confirmados por COVID-19 - Minas Gerais")
 @st.cache_data
 def carregar_dados():
     df = pd.read_csv(
-        r'C:\Users\Myrath\Desktop\Projetos_VSCode\.vscode\.python\analise_de_dados\dashboard_covid_MG\OBITOS_CONF_COVID-19_MG.csv',
+        'OBITOS_CONF_COVID-19_MG.csv',
         sep=";", encoding="latin1"
     )
     df = df.drop(columns=[col for col in df.columns if "Unnamed" in col])
