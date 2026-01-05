@@ -1,4 +1,2 @@
 # Arquivos de ambiente
-.env
-*.env
-/.vscode/.python/chatBot/.env
+.env*
