@@ -1,0 +1,299 @@
+/* ============================================
+   DESIGN SYSTEM — Meu Primeiro Investimento
+   Paleta: Creme · Sage · Terracota · Blush
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+/* ── Tokens ─────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg-primary:    #faf8f5;
+  --bg-secondary:  #f3ede6;
+  --bg-tertiary:   #ede5db;
+
+  /* Accent palette */
+  --accent-sage:        #7a9e87;
+  --accent-terracotta:  #c07055;
+  --accent-blush:       #e8d5c8;
+  --accent-blush-dark:  #b8856a;
+  --accent-gold:        #b89a6e;
+
+  /* Typography */
+  --text-primary:   #2c2520;
+  --text-secondary: #6b5f57;
+  --text-muted:     #a89990;
+
+  /* Borders */
+  --border-light: #e4dbd4;
+
+  /* Radii */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+}
+
+/* ── Reset / Base ───────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Display font ───────────────────────── */
+.font-display {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ── Reveal animation ───────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  animation: none;
+}
+
+.revealed {
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ── Float animation (hero icons) ──────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+.float-anim {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ── Scroll line animation ──────────────── */
+@keyframes scrollLine {
+  0%   { transform: scaleY(0); transform-origin: top; }
+  50%  { transform: scaleY(1); transform-origin: top; }
+  51%  { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+.scroll-line {
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+/* ── Shimmer no botão primário ──────────── */
+@keyframes shimmer {
+  0%   { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(250%) skewX(-15deg); }
+}
+
+.btn-shimmer {
+  overflow: hidden;
+}
+
+.btn-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  animation: shimmer 2.8s ease-in-out infinite;
+  animation-delay: 1s;
+  pointer-events: none;
+}
+
+/* ── Badge pulsante (urgência) ──────────── */
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(192, 112, 85, 0.55); }
+  50%       { box-shadow: 0 0 0 6px rgba(192, 112, 85, 0); }
+}
+
+.badge-pulse {
+  animation: badgePulse 1.8s ease-in-out infinite;
+}
+
+/* ── Buttons ─────────────────────────────── */
+.btn-primary {
+  display: inline-block;
+  background: var(--accent-terracotta);
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: var(--radius-md);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.15);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(192, 112, 85, 0.35);
+}
+
+.btn-primary:hover::after {
+  opacity: 1;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 16px 36px;
+  border-radius: var(--radius-md);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-terracotta);
+  color: var(--accent-terracotta);
+  transform: translateY(-2px);
+}
+
+/* ── Stat items ──────────────────────────── */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stat-item:hover {
+  transform: translateY(-6px);
+}
+
+/* ── Benefit cards ───────────────────────── */
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.benefit-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: cardReveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(44, 37, 32, 0.08);
+  border-color: var(--accent-blush);
+}
+
+/* ── Module accordion items ──────────────── */
+.module-item {
+  border-radius: 0;
+  transition: background 0.3s ease;
+}
+
+.module-item:first-child {
+  border-top: 1px solid var(--border-light);
+}
+
+/* ── Testimonial cards ───────────────────── */
+.testimonial-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: cardReveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(44, 37, 32, 0.08);
+}
+
+/* ── Pricing card ────────────────────────── */
+.pricing-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--accent-blush) 0%, transparent 70%);
+  opacity: 0.4;
+  transform: translate(50%, -50%);
+}
+
+/* ── Utility ─────────────────────────────── */
+.w-full { width: 100%; }
+.text-center { text-align: center; }
+.leading-none { line-height: 1; }
+
+/* ── Scrollbar ───────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-blush);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-terracotta);
+}
